@@ -47,37 +47,44 @@ public class TextFileIndex implements SimpleIndex {
 
 	@Override
 	public boolean contains(Path location, String word) {
-		return false;
+		return map.containsKey(location) ? map.get(location).contains(word) : false;
 	}
 
 	@Override
 	public Collection<Path> get() {
-		// TODO Auto-generated method stub
-		return null;
+		return map.keySet();
 	}
 
 	@Override
 	public Collection<String> get(Path location) {
-		// TODO Auto-generated method stub
-		return null;
+		return map.containsKey(location) ? map.get(location) : new TreeSet<>();
 	}
+	/**
+	 * toString() function
+	 * 
+	 * @returns JSON-ish string representation of the index
+	 * 
+	 */
 	
 	public String toString() {
-		Set<Path> keys = map.keySet();
-		Iterator<Path> it = keys.iterator();
+		Iterator<Path> it = map.keySet().iterator();
 		StringBuilder result = new StringBuilder();
 		
+		//Case: Head
 		result.append("{");
 		
 		if (it.hasNext()) {
 			Path current = it.next();
 			result.append("\n\t" + current.toString() + ": " + map.get(current).toString());
 		}
+		
+		//Case: Other values
 		while (it.hasNext()) {
 			Path current = it.next();
 			result.append(",\n\t" + current.toString() + ": " + map.get(current).toString());
 		}
 		
+		//Case: Tail (after appending all values)
 		result.append("\n}");
 		
 		return result.toString();

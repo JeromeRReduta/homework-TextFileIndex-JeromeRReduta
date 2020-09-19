@@ -36,3 +36,11 @@ size(Path) and size():
 	Pseudocode for size():
 		return map.size();
 
+toString():
+	Desired result:
+	{
+		Path1: [WordArray1],
+		Path2: [WordArray2],
+		...
+		Pathn: [WordArrayn]
+	}
