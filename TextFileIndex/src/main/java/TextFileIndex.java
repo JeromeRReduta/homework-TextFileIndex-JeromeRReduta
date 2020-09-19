@@ -63,6 +63,7 @@ public class TextFileIndex implements SimpleIndex {
 	 * 
 	 */
 	
+	@Override
 	public String toString() {
 		Iterator<Path> it = map.keySet().iterator();
 		StringBuilder result = new StringBuilder();
