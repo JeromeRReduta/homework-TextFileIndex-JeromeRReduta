@@ -52,12 +52,12 @@ public class TextFileIndex implements SimpleIndex {
 
 	@Override
 	public Collection<Path> get() {
-		return map.keySet();
+		return new TreeSet<Path>(map.keySet());
 	}
 
 	@Override
 	public Collection<String> get(Path location) {
-		return map.containsKey(location) ? map.get(location) : new TreeSet<>();
+		return map.containsKey(location) ? new TreeSet<String>(map.get(location)) : new TreeSet<>();
 	}
 	/**
 	 * toString() function
