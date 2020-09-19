@@ -2,3 +2,14 @@ Jerome Reduta
 
 TextFileIndexNotes
 
+add(Path, String[]) and add(Path, String)
+
+	Planning to make add(Path, String) implementation-specific (i.e. it'll be odne didfferently in TextFileIndex than in other Index files)
+	
+	But basically:
+	
+	add(Path, String[]):
+		for (String word in String[]):
+			add(Path, word)
+			
+			
