@@ -1,11 +1,8 @@
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
 
 /**
@@ -92,16 +89,4 @@ public class TextFileIndex implements SimpleIndex {
 
   // TODO Modify class declaration to implement the Index interface for String elements
   // TODO Modify anything within this class as necessary
-	
-	public static void main(String[] args) {
-		TextFileIndex tfi = new TextFileIndex();
-		
-		tfi.add(Path.of("Bob"), "Dylan");
-		tfi.add(Path.of("Dylan"), "Dylan also");
-		tfi.add(Path.of("Dylan"), "not actually Dylan");
-		
-
-		System.out.println(tfi);
-	}
-
 }

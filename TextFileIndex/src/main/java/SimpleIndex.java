@@ -1,8 +1,7 @@
 import java.nio.file.Path;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+
 
 /**
  * An index to store locations and the words found at those locations. Makes no
@@ -13,8 +12,6 @@ import java.util.Map;
  * @version Fall 2020
  */
 public interface SimpleIndex {
-	
-	Map<String, String> map = new HashMap<>();
 
 	/**
 	 * Adds the location and word.
