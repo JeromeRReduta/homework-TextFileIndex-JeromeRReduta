@@ -28,3 +28,11 @@ TextFileIndex
 
 			add word to end of map.get(location)
 
+size(Path) and size():
+	Pseudocode for Size(Path):
+		If map.get(Path) is null, return 0
+		Else, return map.get(Path).size()
+
+	Pseudocode for size():
+		return map.size();
+

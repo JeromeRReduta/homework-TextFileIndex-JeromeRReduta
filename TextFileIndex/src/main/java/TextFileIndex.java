@@ -30,26 +30,22 @@ public class TextFileIndex implements SimpleIndex {
 
 	@Override
 	public int size(Path location) {
-		// TODO Auto-generated method stub
-		return 0;
+		return map.get(location) != null ? map.get(location).size() : 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return map.size();
 	}
 
 	@Override
 	public boolean contains(Path location) {
-		// TODO Auto-generated method stub
-		return false;
+		return map.containsKey(location);
 	}
 
 	@Override
 	public boolean contains(Path location, String word) {
-		// TODO Auto-generated method stub
-		return false;
+		
 	}
 
 	@Override
