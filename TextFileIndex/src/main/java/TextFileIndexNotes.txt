@@ -2,14 +2,29 @@ Jerome Reduta
 
 TextFileIndexNotes
 
-add(Path, String[]) and add(Path, String)
 
-	Planning to make add(Path, String) implementation-specific (i.e. it'll be odne didfferently in TextFileIndex than in other Index files)
+Index
+
+	I think I'mma store it as a map:
+		Key = value
+		Path = String[] (these are the words in path)
+
 	
-	But basically:
-	
-	add(Path, String[]):
-		for (String word in String[]):
-			add(Path, word)
-			
-			
+
+SimpleIndex
+	add():
+		adds location to map
+
+
+
+TextFileIndex
+
+	add(Path, word):
+		Note: Using TreeSet to keep every value unique
+
+		Psuedocode:
+			if map does not have key:
+				add pair location = new TreeSet<String>
+
+			add word to end of map.get(location)
+
