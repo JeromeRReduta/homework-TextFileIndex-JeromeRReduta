@@ -28,8 +28,6 @@ public interface SimpleIndex {
 	 * @param words the words found at that location
 	 */
 	public default void add(Path location, String[] words) {
-		// TODO Implement this method.
-		
 		for (String word : words) {
 			add(location, word);
 		}
